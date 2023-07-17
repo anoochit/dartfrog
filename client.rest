@@ -1,0 +1,31 @@
+### GET /
+
+GET http://localhost:8080
+
+### GET /todos
+
+GET http://localhost:8080/todos
+
+### GET /todos/[id]
+
+GET http://localhost:8080/todos/1
+
+### POST /todos
+
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+    "title" : "task 1",
+    "complete" : false
+}
+
+### PUT
+
+PUT http://localhost:8080/todos/1
+Content-Type: application/json
+
+{
+    "title" : "this is task 1",
+    "complete" : false
+}

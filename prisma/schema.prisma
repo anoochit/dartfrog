@@ -1,0 +1,19 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "dart run orm"
+  binaryTargets = ["native"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Todos {
+  id       Int      @id @default(autoincrement())
+  title    String   @default("not title")
+  complete Boolean  @default(false)
+  created  DateTime @default(now())
+}
